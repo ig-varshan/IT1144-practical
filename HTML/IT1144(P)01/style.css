@@ -1,0 +1,56 @@
+img{
+	display:block;
+	margin:20px;
+	width:400px;
+	
+}
+
+h1{
+	background-color: #1E3A8A;
+	color: #F9FAFB;
+	text-align:center;
+}
+
+h2{
+	color: #1E3A8A
+	
+}
+
+section{
+	margin:40px;
+	padding:10px;
+	border:2px solid black;
+	border-radius:20px;
+	background-color:rgba(255,255,255,0.9);
+	box-shadow:10px 10px 5px #888888;
+}
+
+.button
+		a{
+		text-decoration:none;
+		color:white;
+		
+	}
+		
+	.button{
+		display:block;
+		margin:0 auto;
+		border-radius:20px;
+		background-color:#1E3A8A;
+		
+	}
+	
+	button :hover{
+		#162F6A;
+		
+	}	
+	
+	footer{
+		text-align:center;
+		background-color:#1E3A8A;
+		color: #F9FAFB;
+		margin:25px;
+		height:30px;
+	}
+	
+

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<title>BOOKING</title>
+			<link rel="stylesheet" href="style.css">
+	</head>
+		<body>
+				<div class="form-container">
+			
+				<h2>Hotel Booking Form</h2>
+			
+			<form>	
+					<input type="text" id="name" placeholder="Enter Name">
+					<br><br>
+					<input type="email" id="email" placeholder="Enter Email">
+					<br><br>
+					<input type="text" id="phone" placeholder="Enter Phone Number">
+					<br><br>
+					
+					
+					<select id="room">
+						<option>Single Room</option>
+						<option>Double Room</optipon>
+						<option>Deluxe Room</optipon>
+						<option>Family Room</optipon>
+					</select>	
+						
+					<br><br>
+					<label class="payment-title">Payment Method: </label>
+				<div class="Payment-method">
+					
+					<br>
+				
+					<input type="radio" id="cash" name="payment" value="Cash">
+					<label for="cash"> Cash</label>
+					
+					<input type="radio" id="card" name="payment" value="Card">
+					<label for="card"> Card</label>
+					
+					<input type="radio" id="online" name="payment" value="Online Transfer">
+					<label for="online"> Online Transfer</label>
+					<br><br>
+					
+					<button type="button" onclick="submitBooking()">
+						Submit
+					</button>
+					<br><br>
+					<div id="result"></div>
+					</div>
+					</div>
+			</form>		
+					<script src="script.js"></script>
+					
+		</body>
+	
+</html>

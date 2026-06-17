@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo-title">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h2>Lost & Found | University of Vavuniya</h2>
+    </div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="report.html">Report Lost</a>
+        <a href="found.html">Found Items</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- TITLE -->
+<h1 style="text-align:center; margin-top:40px; color:#670047;">
+    Contact Us ☎️
+</h1>
+
+<!-- UNIVERSITY CONTACT DETAILS -->
+<div class="contact-info">
+    <strong>📍 Address:</strong> Pampaimadu, Vavuniya, Sri Lanka |
+
+    <strong>📞 Phone:</strong> +94 24 222 2265 |
+
+    <strong>📧 Email:</strong> lostandfoundoffice@vau.ac.lk
+</div>
+
+<!-- CONTACT FORM -->
+<div class="form-box">
+
+    <form id="contactForm">
+
+        <input
+            type="text"
+            id="contactName"
+            placeholder="Your Name"
+            required>
+
+        <input
+            type="tel"
+            id="contactPhone"
+            placeholder="Contact Number (07xxxxxxxx)"
+            pattern="07[0-9]{8}"
+            required>
+
+        <input
+            type="email"
+            id="contactEmail"
+            placeholder="Email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            required>
+
+        <textarea
+            id="contactMessage"
+            placeholder="Your Message..."
+            rows="5"
+            required></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>Lost & Found System &copy; 2026 University of Vavuniya, Sri Lanka. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const email = document.getElementById("contactEmail");
+
+    if (!email.checkValidity()) {
+        alert("Please enter a valid email address.");
+        email.focus();
+        return;
+    }
+
+    sendMessage();
+});
+
+function sendMessage() {
+
+    const name = document.getElementById("contactName").value;
+    const phone = document.getElementById("contactPhone").value;
+    const email = document.getElementById("contactEmail").value;
+    const message = document.getElementById("contactMessage").value;
+
+    alert(
+        "Message Sent Successfully!\n\n" +
+        "Name: " + name +
+        "\nPhone: " + phone +
+        "\nEmail: " + email
+    );
+
+    document.getElementById("contactForm").reset();
+}
+</script>
+
+</body>
+</html>
+```

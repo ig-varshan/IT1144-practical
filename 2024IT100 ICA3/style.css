@@ -1,0 +1,208 @@
+/* ================= GLOBAL STYLES ================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #F8FAFC;
+    color: #1F2937;
+    animation: fadeIn 1s ease; /* page loads with fade-in effect */
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    background: #670047;
+    color: white;
+    display: flex; /*used to create flexbox layout */
+    justify-content: space-between;  /*to keep space between nav.a and logo-title */
+    align-items: center; /* to align in center of the nav bar */
+    padding: 15px 40px; /*height and width of the nav bar */
+    position: sticky; /* To make the nav bar always on top*/
+    top: 0;  /* 0 means all top to the page*/
+    z-index: 1000; /*needs to display nav bar over other elements */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15); /*to give a shadow effect to the nav bar(horizontal,vertical,blur radius,black shadow opacity) */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+   
+}
+
+nav a:hover {
+    color: #FF7AC8;
+}
+
+/* ================= LOGO ================= */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    text-align: center;
+    padding: 120px 20px;/* top to bottom, left to right */
+    background: linear-gradient(
+        rgba(103, 0, 71, 0.85),
+        rgba(255, 255, 255, 0.80)
+    ),
+    url("background02.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* main heading */
+.hero h1 {
+    font-size: 50px; /* changes main title size */
+    margin-bottom: 15px; /* to add 15px place below it*/
+    animation: slideUp 1s ease; /* text slides up */
+}
+
+/* subtitle */
+.hero p {
+    font-size: 18px; /* changes paragraph text size */
+    animation: slideUp 1.3s ease; /* delayed slide animation */
+}
+
+/* ================= BUTTON ================= */
+button {
+    padding: 12px 25px;
+    border: none;
+    background: #670047; /* wine red*/
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s; /* button transition timing */
+}
+
+/* button hover effect */
+button:hover {
+    background: #8A005F; /*light winered*/
+    transform: scale(1.05); /* button grows slightly */
+}
+
+/* ================= STATS SECTION ================= */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 50px 20px;
+    flex-wrap: wrap; /*Automatically moves to the next line if needed*/
+}
+
+/* ================= CARD ================= */
+.card {
+    background: #fff;
+    padding: 20px; /* space inside an element, between its content and its border.*/
+    width: 220px;
+    text-align: center;
+    border-radius: 12px;
+    border-top: 4px solid #670047; /*winered*/
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    animation: popUp 0.8s ease; /* card appears with pop effect */
+}
+
+/* card hover effect */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* card title */
+.card h2 {
+    color: #670047; /*winered*/
+}
+
+/* card image */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /*control how the content fits inside its container.*/
+    border-radius: 8px;
+}
+
+/* ================= FORM ================= */
+.form-box {
+    width: 400px; /*width of the box*/
+    margin: auto;
+    margin-top: 30px; /*space outside an element's border.*/
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 4px solid #670047;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* input and textarea fields */
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    background: #F9FAFB; /*light white*/
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background: #670047;
+    color: white; 
+}
+
+/* ================= CONTACT INFO ================= */
+.contact-info {
+    text-align: center;
+    font-size: 16px; 
+    margin: 25px auto;
+    font-weight: bold;
+    line-height: 1.8; /*controls the vertical spacing between lines of text.*/
+    padding: 0 20px;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
